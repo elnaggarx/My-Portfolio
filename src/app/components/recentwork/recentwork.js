@@ -5,8 +5,7 @@ import ingazo from "@/app/assets/images/ingazo.png"
 const Recentwork = () => {
   return (
     <div className="mt-32 px-8 pb-44">
-        <h1 className="font-[bomstad-bold] text-8xl">Obsession dilevers idealism.</h1>
-        <div className="w-full mt-32">
+        <div className="w-full">
             <p className="font-[bomstad-semibold] text-xl">Recent Work:</p>
             <hr className="border-[#6e6e73]"></hr>
         </div>
