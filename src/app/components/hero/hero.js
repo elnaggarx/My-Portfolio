@@ -3,14 +3,15 @@ import Image from "next/image";
 import hero from "@/app/assets/images/hero1.png";
 import { ArrowRight } from "@deemlol/next-icons";
 import { Codepen } from "@deemlol/next-icons";
-
+import abstracthero from "@/app/assets/images/abstracthero.png";
 
 
 const Hero = () => {
 
   return (
-  
-    <div className="px-8 flex flex-row  justify-between items-center h-screen box-border">
+  <>
+    
+    <div className="px-8 flex flex-row  justify-between items-center h-screen box-border z-20">
       <div className="flex flex-col gap-6 w-[70%]">
         <h3 className="text-2xl font-[bomstad-regular] text-[#0f1a22]">
           Front-End Developer
@@ -30,13 +31,13 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-[20%] relative">
-        <div className="h-90 w-90 bg-[#dedede] rounded-full absolute bottom-[-10%] left-[38%] transform -translate-x-1/2 -z-10"></div>
+      {<div className="w-[20%] relative">
         <Image src={hero} alt="hero image" className="w-[80%] z-20"></Image>
-      </div>
+      </div>}
 
-
+      <Image src={abstracthero} alt="abstract hero image" className="absolute top-0 left-0 w-full h-screen object-cover opacity-65 -z-10 "></Image>
     </div>
+    </>
 
   
   

@@ -77,7 +77,7 @@ const Valueslider = () => {
 
   return (
     <div ref={containerRef}>
-          <div className='h-screen overflow-hidden bg-[#dedede] flex items-center' ref={triggerRef}>
+          <div className='h-screen overflow-hidden flex items-center' ref={triggerRef}>
       <div className="flex gap-8 pl-8 flex-nowrap will-change-transform" ref={imgsRef}>
         {/* Item 1 - Video */}
         <div ref={container1Ref} className={`shrink-0 w-[56%] h-100 rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-4xl overflow-hidden`}>
