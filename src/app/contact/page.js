@@ -6,10 +6,10 @@ const Contact = () => {
       <div className="h-screen mt-30 w-full flex justify-between items-center px-8">
         <div className="flex items-start justify-between gap-10">
           <div className="flex-1">
-            <h1 className="font-[bomstad-bold] text-8xl">
+            <h1 className="font-[bomstad-light] text-7xl text-[#0a1f22]">
               Ready to work together?
             </h1>
-            <p className="font-[bomstad-regular] text-2xl mt-10">
+            <p className="font-[montreal-light] text-2xl mt-10 text-[#6e6e73]">
               Tell us a bit about your company, your goals, and how we can help.
               I’ll take care of the rest.
             </p>

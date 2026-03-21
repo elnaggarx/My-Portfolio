@@ -76,7 +76,7 @@ const Valueslider = () => {
   })
 
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className='z-50'>
           <div className='h-screen overflow-hidden flex items-center' ref={triggerRef}>
       <div className="flex gap-8 pl-8 flex-nowrap will-change-transform" ref={imgsRef}>
         {/* Item 1 - Video */}

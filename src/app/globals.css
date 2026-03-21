@@ -27,6 +27,19 @@
   src: url("./assets/fonts/BomstadDisplay-SemiBold.ttf");
 }
 
+@font-face{
+  font-family: montreal-light;
+  src: url("./assets/fonts/ppneuemontreal-thin.otf");
+}
+@font-face{
+  font-family: montreal-regular;
+  src: url("./assets/fonts/ppneuemontreal-medium.otf");
+}
+@font-face {
+  font-family: montreal-book;
+  src: url("./assets/fonts/ppneuemontreal-book.otf");
+}
+
 @keyframes move{
   from {transform: translateX(0);}
   to {transform: translateX(-50%);}

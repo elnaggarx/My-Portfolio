@@ -1,6 +1,6 @@
 const Leaningmarquee = () => {
   return (
-    <div className="marquee-outer relative overflow-x-hidden overflow-hidden py-40">
+    <div className="marquee-outer relative overflow-x-hidden overflow-hidden py-[50vh]">
       <div className="marquee-wrapper-one bg-[#0f1a22] absolute top-2/4 left-0 py-5">
         <div className="overflow-hidden">
           <div className="marquee-trackk flex w-max whitespace-nowrap text-3xl font-[bomstad-semibold] text-[#6e6e73]">

@@ -11,8 +11,9 @@ const Hero = () => {
   return (
   <>
     
-    <div className="px-8 flex flex-row  justify-between items-center h-screen box-border z-20">
-      <div className="flex flex-col gap-6 w-[70%]">
+    <div className="px-8 flex flex-row  justify-between items-center h-screen box-border -z-10 relative">
+            
+      <div className="flex flex-col gap-6 w-[70%] relative z-10">
         <h3 className="text-2xl font-[bomstad-regular] text-[#0f1a22]">
           Front-End Developer
         </h3>
@@ -31,11 +32,11 @@ const Hero = () => {
         </div>
       </div>
 
-      {<div className="w-[20%] relative">
+      {<div className="w-[20%] relative z-10">
         <Image src={hero} alt="hero image" className="w-[80%] z-20"></Image>
       </div>}
 
-      <Image src={abstracthero} alt="abstract hero image" className="absolute top-0 left-0 w-full h-screen object-cover opacity-65 -z-10 "></Image>
+      <Image src={abstracthero} alt="abstract hero image" className="absolute top-0 left-0 w-full h-auto object-cover opacity-65 -z-10 "></Image>
     </div>
     </>
 

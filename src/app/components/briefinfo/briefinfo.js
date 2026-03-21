@@ -2,7 +2,7 @@ import Image from "next/image"
 import personalImage from "@/app/assets/images/personalimage1.jpeg"
 const Briefinfo = () => {
   return (
-    <div className="px-8 py-16">
+    <div className="px-8 pt-16">
       <Image src={personalImage} className="w-full h-screen object-cover rounded-4xl" alt="Personal Image" />
       <div className="flex justify-between mt-16 gap-10">
         <div className="flex-1 border-b border-black pb-16">

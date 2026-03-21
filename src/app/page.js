@@ -11,6 +11,7 @@ import Leaningmarquee from "./components/leaningmarque/leaningmarquee";
 import Recentwork from "./components/recentwork/recentwork";
 import Services from "./components/services/services";
 import Summarycard from "./components/summarycard/summarycard";
+import Footer from "./components/footer/footer";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -66,6 +67,7 @@ export default function Home() {
         </div>
       </div>
       <Leaningmarquee></Leaningmarquee>
+      <Footer />
       </div>
     </div>
   );
