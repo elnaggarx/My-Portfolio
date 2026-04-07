@@ -1,4 +1,5 @@
 import Navbar from "./components/nav/navbar";
+import PortableMenu from "./components/portablemenu/portablemenu";
 import "./globals.css";
 
 
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
+        <PortableMenu></PortableMenu>
         <main>
           {children}
         </main>

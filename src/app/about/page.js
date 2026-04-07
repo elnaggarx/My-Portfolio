@@ -28,7 +28,7 @@ const About = () => {
       <div id='smooth-content'>
               <div className='min-h-screen w-full px-8 flex flex-col justify-center'>
         <h1 className="font-[bomstad-light] text-[#0a1f22] text-7xl ">About Me</h1>
-        <p className='font-sans text-[#6e6e73] text-lg max-w-[70%] mt-7'>
+        <p className='font-[montreal-light] text-[#6e6e73] text-2xl max-w-[70%] mt-7'>
 I design and build high-performance systems across web, backend, game development, and AI.
 
 From visually rich, animated interfaces to scalable backend architectures and real-time applications, I focus on delivering products that are fast, precise, and engineered to stand out.
