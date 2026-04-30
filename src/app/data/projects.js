@@ -5,6 +5,7 @@ export const projects = [
     {
         id:1,
         name: "Ingazo",
+        slug: "ingazo",
         position: "Frontend Developer",
         description: "A car pooling app that connects drivers with similar routes to share rides and reduce carbon emissions.",
         detailedDescription: "Ingazo is a car pooling app that connects drivers with similar routes to share rides and reduce carbon emissions. The app allows users to create profiles, search for rides, and communicate with other users. It also includes features such as ride scheduling, payment processing, and user ratings. The goal of Ingazo is to promote sustainable transportation and reduce traffic congestion by encouraging people to share rides. The app is designed to be user-friendly and accessible, making it easy for anyone to find and share rides.",
@@ -23,11 +24,13 @@ export const projects = [
             "Payment Processing: The app includes a secure payment system that allows users to pay for their rides within the app.",
             "User Ratings: Users can rate their ride experiences and provide feedback to help improve the service.",
             "Sustainability Focus: The app promotes sustainable transportation by encouraging users to share rides and reduce their carbon footprint.",
-        ]
+        ],
+        client: "Ingazo"
     },
     {
         id:2,
         name: "IEEE AAST Student Branch Website",
+        slug: "ieeeaast",
         position: "Frontend Developer",
         description: "A website for the IEEE AAST Student Branch, providing information about the branch, its activities, and events.",
         detailedDescription: "The IEEE AAST Student Branch Website is a platform that provides information about the branch, its activities, and events. The website features a clean and modern design, with easy navigation and responsive layout. It includes sections for news and updates, upcoming events, and a gallery of past events. The website also has a contact form for users to get in touch with the branch. The goal of the website is to keep members and visitors informed about the branch's activities and to promote engagement within the community.",
@@ -44,11 +47,13 @@ export const projects = [
             "User-Friendly Interface: The website features a clean and modern design with intuitive navigation, making it easy for users to find information and engage with the content.",
             "Gallery of Past Events: The website includes a gallery section where users can view photos and videos from past events organized by the branch.",
             "Contact Form: The website has a contact form that allows users to get in touch with the branch for inquiries or feedback.",
-        ]
+        ],
+        client: "IEEE AAST Student Branch"
     },
     {
         id:3,
         name: "EOSSC",
+        slug: "eossc",
         position: "Frontend Developer",
         description: "A website for the Egyptian Office of Surveying and Consultation, providing information about the office, its services, and projects.",
         detailedDescription: "The EOSSC website is a platform that provides information about the Egyptian Office of Surveying and Consultation, its services, and projects. The website features a professional and modern design, with easy navigation and responsive layout. It includes sections for services offered, project portfolio, and contact information. The website also has a blog section where the office can share industry insights and updates. The goal of the website is to showcase the office's expertise and attract potential clients.",
@@ -63,6 +68,7 @@ export const projects = [
             "Responsive Design: The website is designed to be responsive, ensuring a seamless experience across different devices and screen sizes.",
             "Professional Interface: The website features a clean and modern design with intuitive navigation, making it easy for users to find information and engage with the content.",
             "Contact Information: The website includes a contact section with the office's address, phone number, and email, as well as a contact form for inquiries.",
-        ]
+        ],
+        client: "EOSSC"
     },
 ]
