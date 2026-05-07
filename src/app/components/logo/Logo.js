@@ -11,6 +11,7 @@ const Logo = forwardRef( function logo(props, ref){
       height="1024.000000pt"
       viewBox="0 0 1536.000000 1024.000000"
       preserveAspectRatio="xMidYMid meet"
+      className="opacity-0 -z-50"
     >
       <g
         transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"

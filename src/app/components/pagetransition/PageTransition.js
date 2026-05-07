@@ -24,12 +24,12 @@ const PageTransition = ({children}) => {
 
     t1.to(blocksRef.current, {
         scaleX: 1,
-        duration: 0.4,
+        duration: 1,
         stagger: 0.02,
         ease: "power2.out",
         transformOrigin: "left",
     })
-    /*.set(logoOverlayRef.current, { opacity: 1 }, '-=0.2')
+    {/*}.set(logoOverlayRef.current, { opacity: 1 }, '-=0.2')
     .set(paths[0], {
         strokeDashoffset: paths[0].getTotalLength(),
         fill: "transparent"
@@ -62,14 +62,14 @@ const PageTransition = ({children}) => {
         opacity: 0,
         duration: 0.25,
         ease: "power2.out",
-    });*/
+    });*/}
 };
 
     const revealPage = ()=>{
         gsap.set(blocksRef.current , {transformOrigin:"right",  scaleX:1});
         gsap.to(blocksRef.current,{
             scaleX:0,
-            duration:0.4,
+            duration:1,
             stagger:0.02,
             ease: "power2.inOut",
             onComplete:()=>{
@@ -146,12 +146,13 @@ const PageTransition = ({children}) => {
 
   return (
     <>
-        <div className="transition-overlay fixed top-0 left-0 w-full h-screen flex z-10 " ref={transitionOverlayRef}></div>
-        {/*<div className="logo-overlay fixed top-0 left-0 w-full h-screen z-10 flex justify-center items-center bg-white  opacity-0 " ref={logoOverlayRef}>
+        <div className="transition-overlay fixed top-0 left-0 w-full h-screen flex z-50 pointer-events-none " ref={transitionOverlayRef}></div>
+        {/*<div className="logo-overlay fixed top-0 left-0 w-full h-screen z-10 flex justify-center items-center bg-white  opacity-0 pointer-events-none " ref={logoOverlayRef}>
             <div className='logo-container h-200px w-200px flex justify-center items-center p-20px'>
                 <Logo ref={logoRef}></Logo>
             </div>
-        </div>*/}
+        </div>
+        */}
         {children}
     </>
   )
