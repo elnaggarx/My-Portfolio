@@ -1,9 +1,36 @@
+"use client";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import Inifinitetext from "./inifinitetext";
 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const Summarycard = () => {
+  const containerRef = useRef();
+  const cardRef = useRef();
+
+  useGSAP(() => {
+    gsap.fromTo(
+      cardRef.current,
+      { clipPath: "inset(0 6% 0 6% round 1.5rem)" },
+      {
+        clipPath: "inset(0 0% 0 0% round 1.5rem)",
+        ease: "none",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 1,
+        },
+      }
+    );
+  }, { scope: containerRef });
+
   return (
-    <div className="px-8 mt-16 w-full">
-      <div className="w-full bg-[#0f1a22] rounded-3xl pt-40 pb-16 px-12">
+    <div ref={containerRef} className="px-8 mt-16 w-full">
+      <div ref={cardRef} className="w-full bg-[#0f1a22] rounded-3xl pt-40 pb-16 px-12">
         <p className="text-5xl font-[bomstad-light] leading-12 text-white">
           Many ideas struggle to become real products , whether due to unclear
           design, poor user experience, or technical complexity. I help bridge

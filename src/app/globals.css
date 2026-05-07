@@ -65,3 +65,13 @@
   margin-left: -20vw;       /* center it */
   transform: rotate(6deg);
 }
+
+
+.block{
+  background-color: #222;
+  flex:1;
+  height: 100%;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+

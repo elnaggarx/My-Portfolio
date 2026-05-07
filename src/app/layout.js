@@ -1,4 +1,5 @@
 import Navbar from "./components/nav/navbar";
+import PageTransition from "./components/pagetransition/PageTransition";
 import PortableMenu from "./components/portablemenu/portablemenu";
 import "./globals.css";
 
@@ -12,11 +13,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <PortableMenu></PortableMenu>
-        <main>
-          {children}
-        </main>
+        <PageTransition>
+          <Navbar />
+          <PortableMenu></PortableMenu>
+          <main>
+            {children}
+          </main>
+        </PageTransition>
       </body>
     </html>
   );

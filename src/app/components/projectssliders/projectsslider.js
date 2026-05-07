@@ -22,6 +22,10 @@ const ProjectsSlider = () => {
   const name2Ref = useRef();
   const name3Ref = useRef();
   const namesRef = [name1Ref, name2Ref, name3Ref];
+  const quoteRef = useRef();
+  const outroSectionRef = useRef();
+  const outroHeadingRef = useRef();
+  const outroParagraphRef = useRef();
 
   useGSAP(
     () => {
@@ -82,18 +86,56 @@ const ProjectsSlider = () => {
           });
         },
       });
+      const outroTrigger = {
+        trigger: outroSectionRef.current,
+        start: "top 50%",
+        end: "bottom top",
+        toggleActions: "play none none reverse",
+      };
+      gsap.to(outroSectionRef.current, {
+        backgroundColor: "#ffff",
+        duration: 0.8,
+        ease: "power2.inOut",
+        scrollTrigger: outroTrigger,
+      });
+      gsap.to(outroHeadingRef.current, {
+        color: "#0a1f22",
+        duration: 0.8,
+        ease: "power2.inOut",
+        scrollTrigger: outroTrigger,
+      });
+      gsap.to(outroParagraphRef.current, {
+        color: "#6e6e73",
+        duration: 0.8,
+        ease: "power2.inOut",
+        scrollTrigger: outroTrigger,
+      });
+
+      gsap.fromTo( quoteRef.current,
+        {clipPath: "inset(0 6% 0 6% round 1.5rem)"},
+        {
+          clipPath: "inset(0 0% 0 0% round 0.1rem)",
+          ease: "none",
+          scrollTrigger: {
+            trigger: quoteRef.current,
+            start: "top 80%",
+            end: "top 20%",
+            scrub: 1,
+          },
+        }
+      )
     }
   );
 
   return (
-    <div className="bg-[#1f1f1f]" ref={containerRef}>
-      <section className="w-full h-screen flex items-center justify-center overflow-hidden  px-8">
+    <div  ref={containerRef}>
+      <section className="w-full h-screen flex items-center justify-center overflow-hidden bg-[#1f1f1f] rounded-t-4xl -mb-1 px-8" ref={quoteRef}>
         <p className="text-7xl text-center  font-[bomstad-light] text-white">
           Every glimpse you take from now will make you value aesthetics
         </p>
       </section>
       <section
-        className="w-full h-screen px-8 overflow-hidden relative box-border"
+        className="w-full h-screen px-8 overflow-hidden relative box-border bg-[#1f1f1f]"
         ref={spotlightRef}
       >
         <div
@@ -190,11 +232,11 @@ const ProjectsSlider = () => {
           })}
         </div>
       </section>
-      <section className="w-full h-screen flex items-center justify-center flex-col px-8 overflow-hidden">
-        <p className="text-7xl text-center  font-[bomstad-light] text-white">
+      <section ref={outroSectionRef} style={{backgroundColor: "#1f1f1f"}} className="w-full h-screen flex items-center justify-center flex-col px-8 overflow-hidden -mt-1">
+        <p ref={outroHeadingRef} style={{color: "#ffffff"}} className="text-7xl text-center  font-[bomstad-light]">
           This is just a brief from what is upcoming
         </p>
-        <p className="text-2xl text-center font-[montreal-light] text-white mt-8 text-[#6e6e73]">
+        <p ref={outroParagraphRef} style={{color: "#4a4a4a"}} className="text-2xl text-center font-[montreal-light]  mt-8">
           I have been working on some projects that I am really excited about,
           and I can’t wait to share them with you. These projects are a
           reflection of my passion for design and development, and they showcase
@@ -203,7 +245,7 @@ const ProjectsSlider = () => {
           details about these projects in the near future.
         </p>
       </section>
-      <h1>Projects Slider</h1>
+      
     </div>
   );
 };
