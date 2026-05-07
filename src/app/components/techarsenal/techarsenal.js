@@ -123,12 +123,12 @@ const TechArsenal = () => {
   }, { scope: containerRef })
 
   return (
-    <div ref={containerRef} className="mt-32 px-8 pb-44">
+    <div ref={containerRef} className="mt-20 md:mt-32 px-4 md:px-8 pb-24 md:pb-44">
       {/* Header */}
-      <div className="w-full mb-20">
-        <p className="tech-header font-[bomstad-semibold] text-2xl text-[#0f1a22] mb-4">Tech Arsenal</p>
+      <div className="w-full mb-12 md:mb-20">
+        <p className="tech-header font-[bomstad-semibold] text-lg md:text-xl lg:text-2xl text-[#0f1a22] mb-4">Tech Arsenal</p>
         <hr className="border-[#6e6e73]/30 mt-2"></hr>
-        <p className="tech-header text-[#6e6e73] font-[bomstad-regular] text-lg mt-6 max-w-2xl">
+        <p className="tech-header text-[#6e6e73] font-[bomstad-regular] text-base md:text-lg mt-5 md:mt-6 max-w-2xl">
           A comprehensive showcase of my technical expertise across web development, game creation, and artificial intelligence.
         </p>
       </div>

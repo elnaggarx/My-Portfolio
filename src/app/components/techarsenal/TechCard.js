@@ -6,7 +6,7 @@ const TechCard = forwardRef(({ tech, index, progressBarRef }, ref) => {
       ref={ref}
       className="group relative"
     >
-      <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:shadow-[#0f1a22]/20 transition-all duration-700 ease-out border border-gray-100/50 hover:border-[#0f1a22]/30 cursor-pointer relative overflow-hidden backdrop-blur-sm">
+      <div className="bg-white rounded-2xl p-5 md:p-8 shadow-xl hover:shadow-2xl hover:shadow-[#0f1a22]/20 transition-all duration-700 ease-out border border-gray-100/50 hover:border-[#0f1a22]/30 cursor-pointer relative overflow-hidden backdrop-blur-sm">
         {/* Animated background gradient */}
         <div className="absolute inset-0 bg-linear-to-br from-[#0f1a22]/5 via-transparent to-[#6e6e73]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
         
@@ -26,12 +26,12 @@ const TechCard = forwardRef(({ tech, index, progressBarRef }, ref) => {
           </div>
           
           {/* Tech name */}
-          <h4 className="font-[bomstad-semibold] text-xl text-[#0f1a22] mb-3 group-hover:text-[#0f1a22] transition-all duration-300">
+          <h4 className="font-[bomstad-semibold] text-lg md:text-xl text-[#0f1a22] mb-3 group-hover:text-[#0f1a22] transition-all duration-300">
             {tech.name}
           </h4>
-          
+
           {/* Description */}
-          <p className="text-[#6e6e73] font-[bomstad-regular] text-base leading-relaxed mb-6 group-hover:text-[#404040] transition-colors duration-300">
+          <p className="text-[#6e6e73] font-[bomstad-regular] text-sm md:text-base leading-relaxed mb-5 md:mb-6 group-hover:text-[#404040] transition-colors duration-300">
             {tech.description}
           </p>
 

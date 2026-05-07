@@ -26,6 +26,7 @@ const ProjectsSlider = () => {
   const outroSectionRef = useRef();
   const outroHeadingRef = useRef();
   const outroParagraphRef = useRef();
+  const introQuoteRef = useRef();
 
   useGSAP(
     () => {
@@ -124,22 +125,31 @@ const ProjectsSlider = () => {
           },
         }
       )
+      gsap.set(introQuoteRef.current, { opacity: 0 });
+      ScrollTrigger.create({
+          trigger: quoteRef.current,
+          start: "top top",
+          end: "bottom 20%",
+          onEnter: () => gsap.to(introQuoteRef.current, { opacity: 1, duration: 1 }),
+          onLeaveBack: () => gsap.to(introQuoteRef.current, { opacity: 0, duration: 1 }),
+      });
+      
     }
   );
 
   return (
     <div  ref={containerRef}>
-      <section className="w-full h-screen flex items-center justify-center overflow-hidden bg-[#1f1f1f] rounded-t-4xl -mb-1 px-8" ref={quoteRef}>
-        <p className="text-7xl text-center  font-[bomstad-light] text-white">
+      <section className="w-full h-screen flex items-center justify-center overflow-hidden bg-[#1f1f1f] rounded-t-3xl md:rounded-t-4xl -mb-1 px-4 md:px-8" ref={quoteRef}>
+        <p ref={introQuoteRef} className="text-3xl md:text-5xl lg:text-7xl text-center  font-[bomstad-light] text-white">
           Every glimpse you take from now will make you value aesthetics
         </p>
       </section>
       <section
-        className="w-full h-screen px-8 overflow-hidden relative box-border bg-[#1f1f1f]"
+        className="w-full h-screen px-4 md:px-8 overflow-hidden relative box-border bg-[#1f1f1f]"
         ref={spotlightRef}
       >
         <div
-          className="absolute top-0 left-0 w-[45%] py-[50svh] flex flex-col px-8 gap-5 z-1"
+          className="absolute top-0 left-0 w-[60%] md:w-[50%] lg:w-[45%] py-[50svh] flex flex-col px-4 md:px-8 gap-4 md:gap-5 z-1"
           ref={imagesContainerRef}
         >
           {projects.map((project, index) => {
@@ -193,7 +203,7 @@ const ProjectsSlider = () => {
           })}
         </div>
         <div
-          className="absolute flex flex-col items-end  right-2 bottom-2 pt-20 pr-8"
+          className="absolute flex flex-col items-end  right-2 bottom-2 pt-12 md:pt-20 pr-4 md:pr-8"
           ref={namesContainerRef}
         >
           {projects.map((project, index) => {
@@ -201,7 +211,7 @@ const ProjectsSlider = () => {
               case 0:
                 return (
                   <p
-                    className="text-5xl font-[montreal-regular] opacity-[50%] text-white z-10 will-change-transform"
+                    className="text-2xl md:text-4xl lg:text-5xl font-[montreal-regular] opacity-[50%] text-white z-10 will-change-transform"
                     ref={name1Ref}
                     key={project.id}
                   >
@@ -211,7 +221,7 @@ const ProjectsSlider = () => {
               case 1:
                 return (
                   <p
-                    className="text-5xl font-[montreal-regular] opacity-[50%] text-white z-10 will-change-transform"
+                    className="text-2xl md:text-4xl lg:text-5xl font-[montreal-regular] opacity-[50%] text-white z-10 will-change-transform"
                     ref={name2Ref}
                     key={project.id}
                   >
@@ -221,7 +231,7 @@ const ProjectsSlider = () => {
               case 2:
                 return (
                   <p
-                    className="text-5xl font-[montreal-regular] opacity-[50%] text-white z-10 will-change-transform"
+                    className="text-2xl md:text-4xl lg:text-5xl font-[montreal-regular] opacity-[50%] text-white z-10 will-change-transform"
                     ref={name3Ref}
                     key={project.id}
                   >
@@ -232,11 +242,11 @@ const ProjectsSlider = () => {
           })}
         </div>
       </section>
-      <section ref={outroSectionRef} style={{backgroundColor: "#1f1f1f"}} className="w-full h-screen flex items-center justify-center flex-col px-8 overflow-hidden -mt-1">
-        <p ref={outroHeadingRef} style={{color: "#ffffff"}} className="text-7xl text-center  font-[bomstad-light]">
+      <section ref={outroSectionRef} style={{backgroundColor: "#1f1f1f"}} className="w-full min-h-screen flex items-center justify-center flex-col px-4 md:px-8 overflow-hidden -mt-1 py-16 md:py-0">
+        <p ref={outroHeadingRef} style={{color: "#ffffff"}} className="text-3xl md:text-5xl lg:text-7xl text-center  font-[bomstad-light]">
           This is just a brief from what is upcoming
         </p>
-        <p ref={outroParagraphRef} style={{color: "#4a4a4a"}} className="text-2xl text-center font-[montreal-light]  mt-8">
+        <p ref={outroParagraphRef} style={{color: "#4a4a4a"}} className="text-base md:text-xl lg:text-2xl text-center font-[montreal-light]  mt-5 md:mt-8">
           I have been working on some projects that I am really excited about,
           and I can’t wait to share them with you. These projects are a
           reflection of my passion for design and development, and they showcase

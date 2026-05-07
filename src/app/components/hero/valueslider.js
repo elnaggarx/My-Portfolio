@@ -78,9 +78,9 @@ const Valueslider = () => {
   return (
     <div ref={containerRef} className='z-50'>
           <div className='h-screen overflow-hidden flex items-center' ref={triggerRef}>
-      <div className="flex gap-8 pl-8 flex-nowrap will-change-transform" ref={imgsRef}>
+      <div className="flex gap-4 md:gap-8 pl-4 md:pl-8 flex-nowrap will-change-transform" ref={imgsRef}>
         {/* Item 1 - Video */}
-        <div ref={container1Ref} className={`shrink-0 w-[56%] h-100 rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-4xl overflow-hidden`}>
+        <div ref={container1Ref} className={`shrink-0 w-[78%] sm:w-[60%] md:w-[56%] h-72 md:h-100 rounded-2xl md:rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-2xl md:text-3xl lg:text-4xl px-6 text-center overflow-hidden`}>
           <video
             ref={video1Ref}
             src="/videos/value1.mp4"
@@ -97,7 +97,7 @@ const Valueslider = () => {
         </div>
 
         {/* Item 2 - Image */}
-        <div ref={container2Ref} className={`shrink-0 w-[56%] h-100 rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-4xl overflow-hidden`}>
+        <div ref={container2Ref} className={`shrink-0 w-[78%] sm:w-[60%] md:w-[56%] h-72 md:h-100 rounded-2xl md:rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-2xl md:text-3xl lg:text-4xl px-6 text-center overflow-hidden`}>
           <Image
             src={value1}
             alt="value"
@@ -108,7 +108,7 @@ const Valueslider = () => {
         </div>
 
         {/* Item 3 - Image */}
-        <div ref={container3Ref} className={`shrink-0 w-[56%] h-100 rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-4xl overflow-hidden`}>
+        <div ref={container3Ref} className={`shrink-0 w-[78%] sm:w-[60%] md:w-[56%] h-72 md:h-100 rounded-2xl md:rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-2xl md:text-3xl lg:text-4xl px-6 text-center overflow-hidden`}>
           <Image
             src={value3}
             alt="value"
@@ -119,7 +119,7 @@ const Valueslider = () => {
         </div>
 
         {/* Item 4 - Image */}
-        <div ref={container4Ref} className={`shrink-0 w-[56%] h-100 rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-4xl overflow-hidden`}>
+        <div ref={container4Ref} className={`shrink-0 w-[78%] sm:w-[60%] md:w-[56%] h-72 md:h-100 rounded-2xl md:rounded-3xl relative group flex justify-center items-center text-white font-[bomstad-semibold] text-2xl md:text-3xl lg:text-4xl px-6 text-center overflow-hidden`}>
           <Image
             src={value4}
             alt="value"

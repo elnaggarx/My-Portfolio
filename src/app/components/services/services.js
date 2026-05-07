@@ -80,13 +80,13 @@ const Services = () => {
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className="mt-32 px-8 w-full">
+    <div ref={containerRef} className="mt-20 md:mt-32 px-4 md:px-8 w-full">
 
-      <div className="mb-20">
-        <p className="srv-eyebrow text-xs font-[bomstad-semibold] uppercase tracking-[0.18em] text-[#6e6e73] pt-1.5 shrink-0">
+      <div className="mb-12 md:mb-20">
+        <p className="srv-eyebrow text-[10px] md:text-xs font-[bomstad-semibold] uppercase tracking-[0.18em] text-[#6e6e73] pt-1.5 shrink-0">
           What I can do for you
         </p>
-        <h2 className="srv-heading flex-1 text-5xl mt-8 font-[bomstad-light] leading-[1.2] text-[#0a1f22]">
+        <h2 className="srv-heading flex-1 text-2xl md:text-4xl lg:text-5xl mt-5 md:mt-8 font-[bomstad-light] leading-tight md:leading-[1.2] text-[#0a1f22]">
           I craft intuitive digital products — websites and mobile apps that connect brands with their audiences through thoughtful design and solid engineering.
         </h2>
       </div>
@@ -99,31 +99,31 @@ const Services = () => {
         <ul className="srv-list flex flex-col w-full">
           <hr className="srv-divider border-[#6e6e73]/30" />
 
-          <li className="srv-item group relative overflow-hidden p-8 flex items-center gap-8 cursor-default rounded-lg" >
+          <li className="srv-item group relative overflow-hidden p-4 md:p-8 flex items-center gap-4 md:gap-8 cursor-default rounded-lg" >
             <div className="absolute inset-0 bg-[#0f1a22] scale-x-0 origin-left transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-x-100" />
-            <span className="relative z-10 font-[montreal-regular] text-sm text-[#6e6e73] w-8 shrink-0 transition-colors duration-300 group-hover:text-white/40">01/</span>
-            <span className="relative z-10 text-3xl font-[bomstad-regular] text-[#0a1f22] transition-colors duration-300 group-hover:text-white">Front-End Web Development</span>
+            <span className="relative z-10 font-[montreal-regular] text-xs md:text-sm text-[#6e6e73] w-6 md:w-8 shrink-0 transition-colors duration-300 group-hover:text-white/40">01/</span>
+            <span className="relative z-10 text-lg md:text-2xl lg:text-3xl font-[bomstad-regular] text-[#0a1f22] transition-colors duration-300 group-hover:text-white">Front-End Web Development</span>
           </li>
           <hr className="srv-divider border-[#6e6e73]/30" />
 
-          <li className="srv-item group relative overflow-hidden p-8 flex items-center gap-8 cursor-default rounded-lg">
+          <li className="srv-item group relative overflow-hidden p-4 md:p-8 flex items-center gap-4 md:gap-8 cursor-default rounded-lg">
             <div className="absolute inset-0 bg-[#0f1a22] scale-x-0 origin-left transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-x-100" />
-            <span className="relative z-10 font-[montreal-regular] text-sm text-[#6e6e73] w-8 shrink-0 transition-colors duration-300 group-hover:text-white/40">02/</span>
-            <span className="relative z-10 text-3xl font-[bomstad-regular] text-[#0a1f22] transition-colors duration-300 group-hover:text-white">Mobile App Development</span>
+            <span className="relative z-10 font-[montreal-regular] text-xs md:text-sm text-[#6e6e73] w-6 md:w-8 shrink-0 transition-colors duration-300 group-hover:text-white/40">02/</span>
+            <span className="relative z-10 text-lg md:text-2xl lg:text-3xl font-[bomstad-regular] text-[#0a1f22] transition-colors duration-300 group-hover:text-white">Mobile App Development</span>
           </li>
           <hr className="srv-divider border-[#6e6e73]/30" />
 
-          <li className="srv-item group relative overflow-hidden p-8 flex items-center gap-8 cursor-default rounded-lg">
+          <li className="srv-item group relative overflow-hidden p-4 md:p-8 flex items-center gap-4 md:gap-8 cursor-default rounded-lg">
             <div className="absolute inset-0 bg-[#0f1a22] scale-x-0 origin-left transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-x-100" />
-            <span className="relative z-10 font-[montreal-regular] text-sm text-[#6e6e73] w-8 shrink-0 transition-colors duration-300 group-hover:text-white/40">03/</span>
-            <span className="relative z-10 text-3xl font-[bomstad-regular] text-[#0a1f22] transition-colors duration-300 group-hover:text-white">UI Development from Figma</span>
+            <span className="relative z-10 font-[montreal-regular] text-xs md:text-sm text-[#6e6e73] w-6 md:w-8 shrink-0 transition-colors duration-300 group-hover:text-white/40">03/</span>
+            <span className="relative z-10 text-lg md:text-2xl lg:text-3xl font-[bomstad-regular] text-[#0a1f22] transition-colors duration-300 group-hover:text-white">UI Development from Figma</span>
           </li>
           <hr className="srv-divider border-[#6e6e73]/30" />
 
-          <li className="srv-item group relative overflow-hidden p-8 flex items-center gap-8 cursor-default rounded-lg">
+          <li className="srv-item group relative overflow-hidden p-4 md:p-8 flex items-center gap-4 md:gap-8 cursor-default rounded-lg">
             <div className="absolute inset-0 bg-[#0f1a22] scale-x-0 origin-left transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-x-100" />
-            <span className="relative z-10 font-[montreal-regular] text-sm text-[#6e6e73] w-8 shrink-0 transition-colors duration-300 group-hover:text-white/40">04/</span>
-            <span className="relative z-10 text-3xl font-[bomstad-regular] text-[#0a1f22] transition-colors duration-300 group-hover:text-white">Product Development & Launch</span>
+            <span className="relative z-10 font-[montreal-regular] text-xs md:text-sm text-[#6e6e73] w-6 md:w-8 shrink-0 transition-colors duration-300 group-hover:text-white/40">04/</span>
+            <span className="relative z-10 text-lg md:text-2xl lg:text-3xl font-[bomstad-regular] text-[#0a1f22] transition-colors duration-300 group-hover:text-white">Product Development & Launch</span>
           </li>
           <hr className="srv-divider border-[#6e6e73]/30" />
         </ul>

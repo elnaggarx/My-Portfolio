@@ -20,12 +20,44 @@ const StickyCards = () => {
     const card3Ref = useRef();
     const card4Ref = useRef();
     const cardsRef = [card1Ref, card2Ref, card3Ref, card4Ref];
-    
+
+    // Intro quote refs — same animation as the "Obsession" quote on the home page
+    const introWrapperRef = useRef();
+    const introCardRef = useRef();
+    const introQuoteRef = useRef();
+
     useGSAP(() => {
 
-        
+        // --- Intro quote animations (mirrors home page "Obsession" effect) ---
+        // 1) Quote text fades in once the dark card pins to the top of the viewport.
+        gsap.set(introQuoteRef.current, { opacity: 0 });
+        ScrollTrigger.create({
+            trigger: introCardRef.current,
+            start: "top top",
+            end: "bottom 20%",
+            onEnter: () => gsap.to(introQuoteRef.current, { opacity: 1, duration: 1 }),
+            onLeaveBack: () => gsap.to(introQuoteRef.current, { opacity: 0, duration: 1 }),
+        });
+
+        // 2) Dark card "opens" outward via clip-path as it scrolls into view.
+        gsap.fromTo(
+            introCardRef.current,
+            { clipPath: "inset(0 6% 0 6% round 1.5rem)" },
+            {
+                clipPath: "inset(0 0% 0 0% round 1.5rem)",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: introWrapperRef.current,
+                    start: "top 80%",
+                    end: "top 20%",
+                    scrub: 1,
+                },
+            }
+        );
+
+
         cardsRef.forEach((card, index) => {
-            
+
             gsap.set(card.current, {
                 y: window.innerHeight,
                 rotation: rotations[index],
@@ -72,9 +104,11 @@ const StickyCards = () => {
   return (
     
     <div>
-        <div className='h-screen bg-[#202020] box-border p-8 m-0  flex items-center justify-center relative'>
-            
-            <p className="text-white text-5xl text-center font-[montreal-light]">Life is a succession of moments. To live each one is to succeed.</p>
+        <div ref={introWrapperRef} className='flex items-center justify-center w-full'>
+            <div ref={introCardRef} className='h-screen w-full bg-[#202020] box-border p-6 md:p-8 m-0 flex items-center justify-center relative rounded-3xl md:rounded-4xl'>
+
+                <p ref={introQuoteRef} className="text-3xl md:text-5xl lg:text-7xl text-center  font-[bomstad-light] text-white">Life is a succession of moments.<br></br>To live each one is to succeed.</p>
+            </div>
         </div>
         <div className="bg-[#e3e3e3] h-screen relative" ref={containerRef}>
             <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[25%] h-[60%] bg-[#ffff] p-[0.5em] flex flex-col gap-[0.5em] rounded-md" ref={card1Ref}>

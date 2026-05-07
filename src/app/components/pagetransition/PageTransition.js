@@ -16,7 +16,7 @@ const PageTransition = ({children}) => {
     const isTransitioning = useRef(false);
 
     const coverPage = (url) => {
-    const paths = Array.from(logoRef.current.querySelectorAll("path"));
+    
 
     const t1 = gsap.timeline({
         onComplete: () => { router.push(url) }
@@ -91,7 +91,7 @@ const PageTransition = ({children}) => {
             blocksRef.current = []
             for(let i=0;i<20;i++){
                 const block = document.createElement("div");
-                block.className = "block";
+                block.className = "transition-block";
                 transitionOverlayRef.current.appendChild(block);
                 blocksRef.current.push(block);
             }

@@ -92,11 +92,11 @@ export default function Home() {
         <div ref={quoteTriggerContainerRef} className="flex justify-center items-center w-full">
           <div
             ref={quoteTriggerRef}
-            className="h-screen bg-[#202020] box-border p-8 m-0 w-full  flex items-center justify-center relative' mt-32 rounded-4xl "
+            className="h-screen bg-[#202020] box-border p-6 md:p-8 m-0 w-full  flex items-center justify-center relative' mt-20 md:mt-32 rounded-3xl md:rounded-4xl "
           >
             <h1
               ref={quoteRef}
-              className="text-7xl text-center  font-[bomstad-light] text-white"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-center  font-[bomstad-light] text-white"
             >
               Obsession dilevers idealism.
             </h1>

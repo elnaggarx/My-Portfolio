@@ -26,9 +26,9 @@ const About = () => {
   return (
     <div className='w-full overflow-x-hidden' ref={containerRef} id="smooth-wrapper">
       <div id='smooth-content'>
-              <div className='min-h-screen w-full px-8 flex flex-col justify-center'>
-        <h1 className="font-[bomstad-light] text-[#0a1f22] text-7xl ">About Me</h1>
-        <p className='font-[montreal-light] text-[#6e6e73] text-2xl max-w-[70%] mt-7'>
+              <div className='min-h-screen w-full px-4 md:px-8 flex flex-col justify-center pt-24 md:pt-0'>
+        <h1 className="font-[bomstad-light] text-[#0a1f22] text-5xl md:text-6xl lg:text-7xl">About Me</h1>
+        <p className='font-[montreal-light] text-[#6e6e73] text-base md:text-xl lg:text-2xl max-w-full md:max-w-[80%] lg:max-w-[70%] mt-5 md:mt-7'>
 I design and build high-performance systems across web, backend, game development, and AI.
 
 From visually rich, animated interfaces to scalable backend architectures and real-time applications, I focus on delivering products that are fast, precise, and engineered to stand out.

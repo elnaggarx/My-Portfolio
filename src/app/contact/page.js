@@ -3,20 +3,20 @@ import React from "react";
 const Contact = () => {
   return (
     <div>
-      <div className="h-screen mt-30 w-full flex justify-between items-center px-8">
-        <div className="flex items-start justify-between gap-10">
+      <div className="min-h-screen mt-20 md:mt-30 w-full flex justify-between items-center px-4 md:px-8 pb-20 md:pb-0 pt-24 md:pt-0">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 w-full">
           <div className="flex-1">
-            <h1 className="font-[bomstad-light] text-7xl text-[#0a1f22]">
+            <h1 className="font-[bomstad-light] text-4xl md:text-6xl lg:text-7xl text-[#0a1f22]">
               Ready to work together?
             </h1>
-            <p className="font-[montreal-light] text-2xl mt-10 text-[#6e6e73]">
+            <p className="font-[montreal-light] text-base md:text-xl lg:text-2xl mt-5 md:mt-10 text-[#6e6e73]">
               Tell us a bit about your company, your goals, and how we can help.
               I’ll take care of the rest.
             </p>
           </div>
-          <div className="flex-1">
-            <form className="space-y-5">
-              <div className="grid grid-cols-2 gap-5">
+          <div className="flex-1 w-full">
+            <form className="space-y-4 md:space-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                 <div className="flex flex-col">
                   <label className="text-sm font-[bomstad-regular] text-gray-700 mb-2">
                     Name
